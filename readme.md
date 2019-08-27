@@ -12,6 +12,31 @@ A simple script (createMachine.ps1), deployed on the robot machine (in master im
 
 Install latest nodejs for running web server
 
+Edit server.js to enter your orchestrator information
+
+```
+var orchestrator = new Orchestrator({
+	 tenancyName: 'default',           // The Orchestrator Tenancy
+	 usernameOrEmailAddress: 'admin',// The Orchestrator login
+	 password: 'passwordhardtofind',               // The Orchestrator password
+	 hostname: 'win-hj42t3fg0nu', // The instance hostname
+	 isSecure: true,                // optional (defaults to true)
+	 port: 443, // optional (defaults to 80 or 443 based on isSecure)
+	 invalidCertificate: true, // optional (defaults to false)
+	 connectionPool: 5 // options, 0=unlimited (defaults to 1)
+});
+```
+
+Edit createMachine.ps1 to enter your nodejs hostname and orchestrator host name
+
+```
+$r= Invoke-WebRequest -URI "http://<YOUR_MACHINE_NAME_OR_IP>:8081/?machinename=$nm&robotname=bot-$nm&type=Development&user=$me"
+```
+and
+```
+$args="--connect -url https://<YOUR_ORCHESTRATOR_NAME> -key $r"
+```
+
 In the project folder, run: 
 ```
 npm install
