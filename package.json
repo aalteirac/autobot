@@ -1,0 +1,16 @@
+{
+  "name": "uipath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Nikhil Ashodariya",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "uipath-orchestrator": "^1.1.0"
+  }
+}
