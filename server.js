@@ -43,11 +43,8 @@ app.get("/", async function(request, response) {
 		  }
 		  id= await getMachineID(request.query.machinename);
 		  //create bot
-		  //console.log(parseInt(id),request.query.machinename,request.query.robotname,request.query.user,request.query.type,"");
 		  var bot=await createRobot(parseInt(id),request.query.machinename,request.query.robotname,request.query.user,request.query.type,"");
 		  response.send(bot);	  
-		  //var key=await createMachine(request.query.cpt);	
-		  //response.send("OK " +key);
 		}
 		catch(err){
 			response.send(err)
@@ -73,7 +70,6 @@ function getMachineKey(id){
 			else{
 				if(data.LicenseKey){
 					resolve(data.LicenseKey);
-					//console.log(data)
 				}
 				else{
 					resolve("NOID")
