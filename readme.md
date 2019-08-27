@@ -27,7 +27,7 @@ var orchestrator = new Orchestrator({
 });
 ```
 
-Edit createMachine.ps1 to enter your nodejs hostname and orchestrator host name
+Edit createMachine.ps1 to enter your nodejs host name and orchestrator host name
 
 ```
 $r= Invoke-WebRequest -URI "http://<YOUR_MACHINE_NAME_OR_IP>:8081/?machinename=$nm&robotname=bot-$nm&type=Development&user=$me"
