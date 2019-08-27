@@ -10,8 +10,8 @@ var Orchestrator = require('uipath-orchestrator');
 var orchestrator = new Orchestrator({
 	 tenancyName: 'default',           // The Orchestrator Tenancy
 	 usernameOrEmailAddress: 'admin',// The Orchestrator login
-	 password: '1vagrantvagrant',               // The Orchestrator password
-	 hostname: 'win-hj42t3fg0nu', // The instance hostname
+	 password: '',               // The Orchestrator password
+	 hostname: 'localhost', // The instance hostname
 	 isSecure: true,                // optional (defaults to true)
 	 port: 443, // optional (defaults to 80 or 443 based on isSecure)
 	 invalidCertificate: true, // optional (defaults to false)
